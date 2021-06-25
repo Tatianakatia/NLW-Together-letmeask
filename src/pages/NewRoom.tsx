@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
+// import { useAuth } from '../hooks/useAuth';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
-// import googleIconImg from '../assets/images/google-icon.svg';
 
-import '../styles/auth.scss';
 import { Button } from '../components/Button';
 
+import '../styles/auth.scss';
+
 export function NewRoom(){
+  // const { user } = useAuth();
+
   return (
     <div id="page-auth">
       <aside>
@@ -16,10 +19,9 @@ export function NewRoom(){
         <p>Get your audience's questions answered in real-time</p>
       </aside>
       <main>
-        <div className="main-content">
+          <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
           <h2>Create a new room</h2>          
-
           <form>
             <input
               type="text"
@@ -33,9 +35,7 @@ export function NewRoom(){
             Would you like to join a room? <Link to="/">Click here</Link>
           </p>
         </div>
-
       </main>
-
     </div>
   )
 }
